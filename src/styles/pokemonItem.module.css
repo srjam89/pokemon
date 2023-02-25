@@ -1,0 +1,42 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid  #FFDE00;
+    border-radius: 3px;
+    width: 300px;
+    height: 400px;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+    display: flex;
+    width: 230px;
+    justify-content: space-between;
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.name::first-letter {
+    text-transform: capitalize;
+}
+
+.img {
+    width: 300px;
+    height: 200px;
+    padding-top: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.info > p {
+    padding-top: 5px;
+}
