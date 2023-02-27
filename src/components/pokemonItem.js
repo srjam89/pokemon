@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 import pokemonItemCSS from "../styles/pokemonItem.module.css";
 
 const PokemonItem = (props) => {
-  console.log(props);
   const { sprites, name } = props.pokemonCard;
   const keys = !(sprites == null) ? Object.keys(sprites) : [];
   const imageUrl = keys.includes("other")
@@ -16,20 +17,58 @@ const PokemonItem = (props) => {
   const attack = props.pokemonCard.stats[1].base_stat;
   const defense = props.pokemonCard.stats[2].base_stat;
 
+  const id = props.pokemonCard.id;
+
+  const pokemonBerries = `pokemonberries/${id}`;
+
   return (
-    <div className={pokemonItemCSS.card}>
-      <div className={pokemonItemCSS.title}>
-        <p className={pokemonItemCSS.name}>{name}</p>
-        <p>HP {hp}</p>
+    <div className={pokemonItemCSS.container}>
+      <div className={pokemonItemCSS.card}>
+        <div className={pokemonItemCSS.title}>
+          <p className={pokemonItemCSS.name}>{name}</p>
+          <p>HP {hp}</p>
+        </div>
+        <img className={pokemonItemCSS.img} src={imageUrl} alt="dinosaur" />
+        <div className={pokemonItemCSS.info}>
+          <p>Type : {type}</p>
+          <p>
+            Abilites : {abilityOne}, {abilityTwo}
+          </p>
+          <p>Attack : {attack}</p>
+          <p>Defense : {defense}</p>
+        </div>
       </div>
-      <img className={pokemonItemCSS.img} src={imageUrl} alt="dinosaur" />
-      <div className={pokemonItemCSS.info}>
-        <p>Type : {type}</p>
-        <p>
-          Abilites : {abilityOne}, {abilityTwo}
-        </p>
-        <p>Attack : {attack}</p>
-        <p>Defense : {defense}</p>
+      <div className={pokemonItemCSS.infoContainer}>
+        <h2>To learn more about your pokemon, click on a topic below.</h2>
+        <div className={pokemonItemCSS.btnContainer}>
+          <Button
+            className={pokemonItemCSS.btn}
+            style={{ backgroundColor: "#CC0000", margin: "5px" }}
+            component={Link}
+            to={pokemonBerries}
+            variant="contained"
+          >
+            Berries
+          </Button>
+          <Button
+            className={pokemonItemCSS.btn}
+            style={{ backgroundColor: "#3B4CCA", margin: "5px" }}
+            component={Link}
+            to={pokemonBerries}
+            variant="contained"
+          >
+            Berries
+          </Button>
+          <Button
+            className={pokemonItemCSS.btn}
+            style={{ backgroundColor: "#B3A125", margin: "5px" }}
+            component={Link}
+            to={pokemonBerries}
+            variant="contained"
+          >
+            Berries
+          </Button>
+        </div>
       </div>
     </div>
   );

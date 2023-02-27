@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'NotoSans-Regular';
+    src: url(../Noto_Sans/NotoSans-Regular.ttf) format('truetype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'NotoSans-Bold';
+    src: url(../Noto_Sans/NotoSans-Bold.ttf) format('truetype');
+    font-weight: bold;
+}
+
+.container {
+    background-color: #FFDE00;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+span {
+    display: inline-block;
+}
+
+.capitalise::first-letter {
+    text-transform: capitalize;
+}
+
+.tileContainer {
+    display: flex;
+    background-color: #fff;
+    width: 60%;
+    margin: auto;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: all ease 0.2s;
+    border-radius: 10px;
+    margin-top: 50px;
+    justify-content: space-between;
+    padding: 30px 80px;
+}
+      
+.tileContainer:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}
+
+div > h2 {
+    margin-top: 15px;
+}
+
+.pokemon {
+    width: 200px;
+    height: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.category {
+    font-family: 'NotoSans-Bold', sans-serif;
+}
+
+.result {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: normal;
+}
+
+.result::first-letter {
+    text-transform: capitalize;
+}
+
+.berries {
+    width: 500px;
+    height: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}

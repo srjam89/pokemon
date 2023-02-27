@@ -20,6 +20,10 @@
     letter-spacing: 2px;
 }
 
+a {
+    text-decoration: none;
+}
+
 .header > img {
     width: 100px;
     height: auto;

@@ -1,18 +1,31 @@
-.card {
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@font-face {
+    font-family: 'NotoSans-Bold';
+    src: url(../Noto_Sans/NotoSans-Bold.ttf) format('truetype');
+    font-weight: bold;
+}
+
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 5px solid  #FFDE00;
+}
+
+.card {
+    border: 7px solid  #FFDE00;
     border-radius: 3px;
     width: 300px;
     height: 400px;
     margin-top: 40px;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
 }
 
 .title {
     display: flex;
-    width: 230px;
+    width: 80%;
+    margin: auto;
     justify-content: space-between;
     padding-top: 10px;
     font-size: 18px;
@@ -39,4 +52,22 @@
 
 .info > p {
     padding-top: 5px;
+}
+
+.infoContainer {
+    margin-top: 30px;
+}
+
+h2 {
+    font-family: 'NotoSans-Bold', sans-serif;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.btn {
+    font-family: 'Press Start 2P', cursive !important;
 }

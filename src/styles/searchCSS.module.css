@@ -29,6 +29,10 @@
     font-family: 'Press Start 2P', courier;
 }
 
+.btn:hover {
+    cursor: pointer;
+}
+
 .cardContainer {
     display: flex;
     justify-content: center;
