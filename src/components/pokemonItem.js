@@ -20,6 +20,7 @@ const PokemonItem = (props) => {
   const id = props.pokemonCard.id;
 
   const pokemonBerries = `pokemonberries/${id}`;
+  const pokemonObjects = `pokemonobjects/${id}`;
 
   return (
     <div className={pokemonItemCSS.container}>
@@ -54,10 +55,10 @@ const PokemonItem = (props) => {
             className={pokemonItemCSS.btn}
             style={{ backgroundColor: "#3B4CCA", margin: "5px" }}
             component={Link}
-            to={pokemonBerries}
+            to={pokemonObjects}
             variant="contained"
           >
-            Berries
+            Objects
           </Button>
           <Button
             className={pokemonItemCSS.btn}

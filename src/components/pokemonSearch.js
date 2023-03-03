@@ -14,10 +14,8 @@ const PokemonSearch = () => {
         setPokemonCard(data);
         setChosenPokemon(true);
         e.preventDefault();
-        console.log(data);
       });
     });
-    e.target.value = "";
   };
 
   const onChange = (e) => {
