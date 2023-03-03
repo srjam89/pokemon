@@ -11,9 +11,10 @@ const PokemonSearch = () => {
   const pokemonSearchTerm = (e) => {
     pokemon(pokemonName).then((res) => {
       res.json().then((data) => {
+        e.preventDefault();
         setPokemonCard(data);
         setChosenPokemon(true);
-        e.preventDefault();
+        setPokemonName("");
       });
     });
   };

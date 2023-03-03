@@ -71,3 +71,15 @@ h2 {
 .btn {
     font-family: 'Press Start 2P', cursive !important;
 }
+
+@media only screen and (max-width: 390px) {
+    .infoContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    h2 {
+        text-align: center;
+        font-size: 22px;
+    }
+}

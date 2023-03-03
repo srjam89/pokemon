@@ -13,7 +13,6 @@ const PokemonObjects = (props) => {
   const getPokemonObjects = (id) => {
     pokemonItemsCall(`${id}`).then((res) => {
       res.json().then((data) => {
-        console.log(data);
         setCollectPokemonItem(data);
         setIsLoading(false);
         setIsLoaded(true);

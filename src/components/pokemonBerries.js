@@ -14,7 +14,6 @@ const PokemonInfo = (props) => {
         setPokemonBerries(data);
         setIsLoading(false);
         setIsLoaded(true);
-        console.log(data);
       });
     });
   };
@@ -23,7 +22,6 @@ const PokemonInfo = (props) => {
     pokemon(`${id}`).then((res) => {
       res.json().then((data) => {
         setPokemonDetails(data);
-        console.log(data);
       });
     });
   };
@@ -51,17 +49,7 @@ const PokemonInfo = (props) => {
     ? sprites.other.dream_world.front_default
     : "/image-not-found.png";
 
-  // const flavorsList = () => {
-  //   <ol>
-  //     {pokemonBerries.flavors.map((flavor) => (
-  //       <li key={flavor}>{flavor}</li>
-  //     ))}
-  //   </ol>;
-  // };
-
-  // const flavors = pokemonBerries.flavors.forEach((flavor) => {
-  //   <li>{flavor.name}</li>;
-  // });
+  const flavorKeys = !(flavors == null) ? Object.keys(flavors) : [];
 
   return (
     <div className={berriesCSS.container}>
@@ -81,10 +69,13 @@ const PokemonInfo = (props) => {
           </div>
           <div className={berriesCSS.flex}>
             <h2 className={berriesCSS.category}>Flavors :</h2>{" "}
-            <h2 className={berriesCSS.result}>
+            {/* <h2 className={berriesCSS.result}>
               &nbsp;
               {flavor1}, {flavor2}
-            </h2>
+            </h2> */}
+            {flavorKeys.map((flavor) => (
+              <h2 className={berriesCSS.result}>&nbsp; {flavor.name}</h2>
+            ))}
           </div>
           <div className={berriesCSS.flex}>
             <h2 className={berriesCSS.category}>Firmness :</h2>{" "}

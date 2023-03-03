@@ -60,15 +60,6 @@ const PokemonItem = (props) => {
           >
             Objects
           </Button>
-          <Button
-            className={pokemonItemCSS.btn}
-            style={{ backgroundColor: "#B3A125", margin: "5px" }}
-            component={Link}
-            to={pokemonBerries}
-            variant="contained"
-          >
-            Berries
-          </Button>
         </div>
       </div>
     </div>
