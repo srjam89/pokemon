@@ -74,7 +74,7 @@ const PokemonInfo = (props) => {
               {flavor1}, {flavor2}
             </h2> */}
             {flavorKeys.map((flavor) => (
-              <h2 className={berriesCSS.result}>&nbsp; {flavor.name}</h2>
+              <h2 className={berriesCSS.result}>&nbsp; {flavor[0].name}</h2>
             ))}
           </div>
           <div className={berriesCSS.flex}>

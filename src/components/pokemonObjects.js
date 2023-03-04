@@ -77,6 +77,7 @@ const PokemonObjects = (props) => {
           variant="woven"
           cols={3}
           gap={8}
+          className={objectCSS.imgContainer}
         >
           {imgArr.map((item) => (
             <ImageListItem key={item.img}>
@@ -85,6 +86,7 @@ const PokemonObjects = (props) => {
                 srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
                 alt={item.title}
                 loading="lazy"
+                className={objectCSS.img}
               />
             </ImageListItem>
           ))}

@@ -69,3 +69,32 @@
     font-weight: normal;
     align-items: center;
 }
+
+@media only screen and (max-width: 390px) {
+    .title {
+        display: flex;
+        justify-content: center;
+    }
+    h1 {
+        text-align: center;
+    }
+    .tileContainer {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding: 30px 50px;
+    }
+    .infoContainer {
+        width: 100%;
+    }
+    .effect {
+        width: 180px;
+        text-align: start;
+        display: flex;
+    }
+    .imgContainer {
+        width: 250px !important;
+        height: 250px !important;
+        margin-top: 20px;
+    }
+}
