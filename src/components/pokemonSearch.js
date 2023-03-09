@@ -7,24 +7,40 @@ const PokemonSearch = () => {
   const [pokemonName, setPokemonName] = useState("");
   const [chosenPokemon, setChosenPokemon] = useState(false);
   const [pokemonCard, setPokemonCard] = useState([]);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const pokemonSearchTerm = (e) => {
+    setErrorMessage("");
     pokemon(pokemonName).then((res) => {
-      res.json().then((data) => {
-        e.preventDefault();
-        setPokemonCard(data);
-        setChosenPokemon(true);
-        setPokemonName("");
-      });
+      res
+        .json()
+        .then((data) => {
+          e.preventDefault();
+          setPokemonCard(data);
+          setChosenPokemon(true);
+          setPokemonName("");
+        })
+        .catch(() => {
+          setErrorMessage("404 error, please try again");
+        });
     });
   };
 
+  const renderErrorMessage = (error) => {
+    return (
+      <div>
+        <h1>{`Something went wrong: ${errorMessage}`}</h1>
+      </div>
+    );
+  };
+
   const onChange = (e) => {
-    setPokemonName(e.target.value);
+    setPokemonName(e.target.value.toLowerCase());
   };
 
   return (
     <div style={{ backgroundColor: "#FF0000", height: "100vh" }}>
+      {errorMessage && renderErrorMessage()}
       <div className={searchCSS.inputContainer}>
         <input
           onChange={onChange}
